@@ -1,0 +1,54 @@
+.card {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 300px;
+  width: 220px;
+  /* margin-bottom: 10px;
+  margin: 0 auto; */
+  /* margin: 300px 10px 80px 800px; */
+  margin: 20px auto;
+  padding: 10px;
+
+  box-shadow: 10px 10px 10px black;
+}
+
+.card[disabled] {
+  background-color: darkgray;
+}
+
+.course-image {
+  height: 120px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.course-image > img {
+  height: 100%;
+}
+
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 15px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar > img {
+  width: 100%;
+}
