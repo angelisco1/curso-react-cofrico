@@ -5,10 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
+  <style>
+    #caja-fuera {
+      height: 200px;
+      width: 200px;
+      border: 1px solid black;
+    }
+
+    #caja-dentro {
+      height: 70px;
+      width: 70px;
+      border: 1px solid black;
+    }
+  </style>
+
 </head>
 <body>
 
   <input type="text" id="searchBy" value="margarita">
+  <div class="container">
+    <ul id="lista-cocktails">
+
+    </ul>
+  </div>
+
+  <div id="caja-fuera">
+    Pulsa en la caja de fuera
+
+    <div id="caja-dentro">
+      Pulsa en la caja de dentro
+
+    </div>
+  </div>
+
+  <a href="http://google.es">Google.es</a>
 
 
   <script src="app-cocktails.js"></script>

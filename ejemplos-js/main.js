@@ -276,3 +276,57 @@ const leerArchivos = async () => {
 }
 
 leerArchivos()
+
+// Rest params
+const getBoletoLoteria = (sorteo, ...nums) => {
+  console.log(`Sorteo ${sorteo}: ${nums.join(', ')}`)
+}
+
+getBoletoLoteria('Primitiva', 4, 13, 18, 24, 39, 42)
+getBoletoLoteria('Bonoloto', 4, 13, 18, 24, 39)
+
+
+// Spread operator
+Math.max(1, 2, 3, 4, 5, 6)
+
+const nums = [1, 2, 3, 4, 5, 6]
+Math.max(...nums)
+
+// Hacer copias
+const json = {
+  nombre: 'JSON',
+  apellido: 'Statham'
+}
+
+// const yaml = {
+//   nombre: 'YAML',
+//   apellido: 'Statham'
+// }
+
+// const yaml = json
+// yaml.nombre = 'YAML'
+
+const yaml = {
+  ...json,
+  nombre: 'YAML'
+}
+
+console.log(json, yaml)
+
+const toml = Object.assign({}, json, {nombre: 'TOML'})
+console.log(json, yaml, toml)
+
+const a1 = [1, 2, 3, 4]
+const b1 = [].concat(a1, [4])
+b1[0] = 5
+console.log(a1, b1)
+
+// Desestructuración
+
+const { apellido, nombre: nombre100 } = json
+console.log(nombre100)
+console.log(apellido)
+
+const [n1, n2, n3, n4, n5] = a1
+// const [n1, n2, ...n3] = a1
+console.log(n1, n2, n3, n4, n5)
