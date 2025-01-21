@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const styles = {
   envoltorio: {
     border: '1px solid black',
@@ -33,9 +35,15 @@ const Sugus = ({ color = 'blue', sabor = 'piña' }) => {
 
 }
 
-Sugus.defaultProps = {
-  color: 'blue',
-  sabor: 'piña'
-}
+// Sugus.propTypes = {
+//   color: PropTypes.string,
+//   sabor: PropTypes.string,
+// }
+
+// Esto está deprecado
+// Sugus.defaultProps = {
+//   color: 'blue',
+//   sabor: 'piña'
+// }
 
 export default Sugus

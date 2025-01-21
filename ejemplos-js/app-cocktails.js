@@ -1,4 +1,4 @@
-const URL_API = 'http://www.thecocktaildb.com/api/json/v1/1/search.php?s='
+const URL_API = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 
 const getCocktailsByName = async (name) => {
   const response = await fetch(`${URL_API}${name}`)
