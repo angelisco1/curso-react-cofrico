@@ -1,9 +1,10 @@
 import React from 'react'
 
-const PreviewCV = () => {
+const PreviewCV = ({ nombre, apellido, trabajo }) => {
   return (
     <div>
-      <h3>Preview de tu CV</h3>
+      <h3>CV de {nombre} {apellido}</h3>
+      <p>Trabajo actual: {trabajo}</p>
     </div>
   )
 }
