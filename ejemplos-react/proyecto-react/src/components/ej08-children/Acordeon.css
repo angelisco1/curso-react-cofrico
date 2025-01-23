@@ -1,0 +1,21 @@
+.acordeon {
+  width: 500px;
+  border: 1px solid black;
+}
+
+.header {
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.body {
+  padding: 15px;
+  height: auto;
+  overflow: hidden;
+}
+
+.body.colapsado {
+  height: 0px;
+}

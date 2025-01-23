@@ -20,12 +20,25 @@ const ListaCocktailsConFiltro = () => {
   const [cocktailSeleccionado, setCocktailSeleccionado] = useState(null)
 
   useEffect(() => {
-    // const cocktails = await getCocktailsByName('margarita')
-    getCocktailsByName(filtro)
-      .then((cocktails) => {
-        console.log('Pasa por el efecto', cocktails)
+    console.log('Valor nuevo: ', filtro, cocktails)
+    const id = setTimeout(() => {
+      // getCocktailsByName(filtro)
+      // .then((cocktails) => {
+      //   console.log('Pasa por el efecto', cocktails)
+      //   setCocktails(cocktails)
+      // })
+      const fetchCocktails = async () => {
+        const cocktails = await getCocktailsByName(filtro)
         setCocktails(cocktails)
-      })
+      }
+
+      fetchCocktails()
+    }, 1500)
+
+    return () => {
+      console.log('Valor anterior: ', filtro, cocktails)
+      clearTimeout(id)
+    }
   }, [filtro])
 
   useEffect(() => {

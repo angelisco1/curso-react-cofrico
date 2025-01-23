@@ -9,10 +9,14 @@ const Reloj = () => {
   const [fechaActual, setFechaActual] = useState(getFecha())
 
   useEffect(() => {
-    setTimeout(() => {
+    const id = setInterval(() => {
       console.log('Se ha ejecutado')
       setFechaActual(getFecha())
     }, 1000)
+
+    return () => {
+      clearInterval(id)
+    }
   })
 
 

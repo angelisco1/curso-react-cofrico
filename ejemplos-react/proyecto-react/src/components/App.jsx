@@ -6,6 +6,8 @@ import Ej04Estado from './ej04-estado/Ej04Estado'
 import Ejercicio01PreviewCV from './ejercicio01-preview-cv/Ejercicio01PreviewCV'
 import Ej05Listas from './ej05-listas/Ej05Listas'
 import Ej06UseEffect from './ej06-useEffect/Ej06UseEffect'
+import Ej07UseContext from './ej07-useContext/Ej07UseContext'
+import Ej08Children from './ej08-children/Ej08Children'
 
 const App = () => {
   const nombre = 'Charly'
@@ -20,7 +22,9 @@ const App = () => {
       {/* <Ej04Estado /> */}
       {/* <Ejercicio01PreviewCV /> */}
       {/* <Ej05Listas /> */}
-      <Ej06UseEffect />
+      {/* <Ej06UseEffect /> */}
+      {/* <Ej07UseContext /> */}
+      <Ej08Children />
 
     </div>
   )
