@@ -1,0 +1,15 @@
+{
+  "memes": [
+    {
+      "id": "abcd",
+      "textoSuperior": "Texto 1",
+      "textoInferior": "Texto 2",
+      "urlImagen": "https://i.pinimg.com/236x/64/6d/8b/646d8bf5a4b2dc031d9e7d04124aafdd.jpg",
+      "colorLetra": "#000000",
+      "likes": 2
+    }
+  ],
+  "users": [
+
+  ]
+}

@@ -1,11 +1,12 @@
 import React from 'react'
+import ListadoMemes from './ListadoMemes'
 
 const App = () => {
   const nombre = 'Charly'
 
   return (
     <div>
-      <h1>Hola { nombre }!!!</h1>
+      <ListadoMemes />
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import CmpA from './CmpA'
 
-export const LangContext = React.createContext('en')
+export const LangContext = React.createContext({lang: 'it', user: 'Mundo', theme: 'dark'})
 
 const Ej07UseContext = () => {
   const [selectedLang, setSelectedLang] = useState('es')
@@ -21,6 +21,8 @@ const Ej07UseContext = () => {
       <LangContext.Provider value={{lang: selectedLang, user: 'Charly', theme: 'dark'}}>
         <CmpA />
       </LangContext.Provider>
+
+      <CmpA />
     </div>
   )
 }

@@ -28,6 +28,10 @@ module.exports = {
         test: /\.css$/,
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(mp4|mp3|png|webp|jpeg)$/,
+        type: 'asset/resource'
       }
     ]
   },
@@ -36,7 +40,11 @@ module.exports = {
     historyApiFallback: true
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: {
+      '@public': path.join(__dirname, 'public'),
+      '@components': path.join(__dirname, 'src', 'components')
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({

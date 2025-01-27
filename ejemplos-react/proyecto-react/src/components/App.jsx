@@ -8,6 +8,8 @@ import Ej05Listas from './ej05-listas/Ej05Listas'
 import Ej06UseEffect from './ej06-useEffect/Ej06UseEffect'
 import Ej07UseContext from './ej07-useContext/Ej07UseContext'
 import Ej08Children from './ej08-children/Ej08Children'
+import Ej09FragmentsYUseRef from './ej09-fragments-y-useRef/Ej09FragmentsYUseRef'
+import Ej10UseReducer from './ej10-useReducer/Ej10UseReducer'
 
 const App = () => {
   const nombre = 'Charly'
@@ -24,7 +26,9 @@ const App = () => {
       {/* <Ej05Listas /> */}
       {/* <Ej06UseEffect /> */}
       {/* <Ej07UseContext /> */}
-      <Ej08Children />
+      {/* <Ej08Children /> */}
+      {/* <Ej09FragmentsYUseRef /> */}
+      <Ej10UseReducer />
 
     </div>
   )
