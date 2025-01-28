@@ -1,0 +1,31 @@
+.meme {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  text-align: center;
+  margin: 15px;
+}
+
+.meme > p {
+  width: 100%;
+  position: absolute;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.meme > p.texto-superior {
+  top: 0px;
+}
+
+.meme > p.texto-inferior {
+  bottom: 0px;
+}
+
+/* p {
+  width: 100%;
+  position: absolute;
+}
+
+.texto-superior {
+  top: 0px;
+} */

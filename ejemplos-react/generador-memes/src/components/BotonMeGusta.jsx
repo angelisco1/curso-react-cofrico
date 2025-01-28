@@ -1,8 +1,8 @@
 import React from 'react'
 
-const BotonMeGusta = () => {
+const BotonMeGusta = ({ likes }) => {
   return (
-    <div>BotonMeGusta</div>
+    <button type="button">👌 ({likes})</button>
   )
 }
 
