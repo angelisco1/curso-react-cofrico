@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Validators from './validators'
 import useInputField from './useInputField'
 import useUserApi from './useUserApi'
+import withLoading from './withLoading'
+import ListaUsuarios from './ListaUsuarios'
 
 const Ej11Formularios = () => {
   // const [nombre, setNombre] = useState('a')
@@ -65,6 +67,12 @@ const Ej11Formularios = () => {
   const mensajesErrorEmail = erroresEmail.map((error, pos) => <li key={pos}>{error}</li>)
   const mensajesErrorPw = erroresPw.map((error, pos) => <li key={pos}>{error}</li>)
 
+  const ListaUsuariosWithLoading = withLoading(ListaUsuarios, 'USUARIOS')
+
+  const ListaPostsWithLoading = withLoading(ListaUsuarios)
+
+  const OtroCmpWithLoading = withLoading(({nombre}) => <p>Hola {nombre}!</p>, null, 'Mundo')
+
   return (
     <div>
       <h2>Tema 11 - Formularios</h2>
@@ -97,8 +105,18 @@ const Ej11Formularios = () => {
         </div>
       </form>
 
-      Loading: {loading ? 'LOADING' : 'NO LOADING'}
-      Users: {JSON.stringify(users)}
+      <p>Loading: {loading ? 'LOADING' : 'NO LOADING'}</p>
+      <p>Users: {JSON.stringify(users)}</p>
+
+      {
+        loading ? <p>LOADING</p> : <p>Users: {JSON.stringify(users)}</p>
+      }
+
+      <hr />
+
+      <ListaUsuariosWithLoading recursos="usuarios" otraProp={true} />
+      <ListaPostsWithLoading recursos="posts" />
+      <OtroCmpWithLoading nombre="Mundo" />
 
     </div>
   )

@@ -13,6 +13,8 @@ const useUserApi = () => {
   }, [])
 
   const getUsers = async () => {
+    setLoading(true)
+
     const response = await fetch('http://localhost:8081/users')
 
     const users = await response.json()

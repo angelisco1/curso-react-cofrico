@@ -11,6 +11,7 @@ import Ej08Children from './ej08-children/Ej08Children'
 import Ej09FragmentsYUseRef from './ej09-fragments-y-useRef/Ej09FragmentsYUseRef'
 import Ej10UseReducer from './ej10-useReducer/Ej10UseReducer'
 import Ej11Formularios from './ej11-formularios/Ej11Formularios'
+import Ej12Suspense from './ej12-suspense/Ej12Suspense'
 
 const App = () => {
   const nombre = 'Charly'
@@ -30,7 +31,8 @@ const App = () => {
       {/* <Ej08Children /> */}
       {/* <Ej09FragmentsYUseRef /> */}
       {/* <Ej10UseReducer /> */}
-      <Ej11Formularios />
+      {/* <Ej11Formularios /> */}
+      <Ej12Suspense />
 
     </div>
   )

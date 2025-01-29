@@ -10,6 +10,11 @@
     }
   ],
   "users": [
-
+    {
+      "id": "32d7",
+      "nombre": "Ángel Villalba",
+      "email": "angel@gmail.com",
+      "password": "1234abcd._;"
+    }
   ]
 }
