@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Meme from './Meme'
 import BotonMeGusta from './BotonMeGusta'
+import DotLoader from 'react-spinners/DotLoader'
 import MemeService from '../services/meme.service'
+import useMemeApi from '../hooks/useMemeApi'
 import '../styles/ListadoMemes.css'
 
 const listaMemes = [
@@ -26,10 +28,13 @@ const listaMemes = [
 const ListadoMemes = () => {
   // const [memes, setMemes] = useState(listaMemes)
   const [memes, setMemes] = useState([])
+  const { loading, error, getAllMemes } = useMemeApi()
 
   useEffect(() => {
     const getMemes = async () => {
       const memes = await MemeService.findAll()
+      // const memes = await getAllMemes()
+      console.log({memes})
       setMemes(memes)
     }
 
@@ -47,7 +52,9 @@ const ListadoMemes = () => {
     <div>
       <h1>Listado Memes</h1>
 
-      {listaMemes}
+      {loading ? (
+          <DotLoader />
+        ) : listaMemes}
     </div>
   )
 }

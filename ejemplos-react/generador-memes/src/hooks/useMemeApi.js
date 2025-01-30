@@ -15,8 +15,8 @@ const useMemeApi = () => {
     } finally {
       setLoading(false)
     }
-
     return memes
+
   }
 
 

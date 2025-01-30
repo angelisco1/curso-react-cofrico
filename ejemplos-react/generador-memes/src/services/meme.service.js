@@ -4,7 +4,8 @@ const findAll = async () => {
   const response = await fetch(url)
 
   if (!response.ok) {
-    throw new Error('Error')
+    const message = await response.text()
+    throw new Error(`Error ${response.status}: ${message}`)
   }
 
   const memes = await response.json()
