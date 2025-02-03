@@ -1,13 +1,17 @@
 import React from 'react'
+import { Provider } from "@components/ui/provider"
 import ListadoMemes from './ListadoMemes'
+import CrearMeme from '../pages/CrearMeme'
+
 
 const App = () => {
-  const nombre = 'Charly'
 
   return (
-    <div>
-      <ListadoMemes />
-    </div>
+    <Provider>
+
+      <CrearMeme />
+      {/* <ListadoMemes /> */}
+    </Provider>
   )
 }
 

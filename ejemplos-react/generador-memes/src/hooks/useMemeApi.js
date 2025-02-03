@@ -1,4 +1,5 @@
 import { useState } from "react"
+import MemeService from "../services/meme.service"
 
 const useMemeApi = () => {
   const [loading, setLoading] = useState(false)

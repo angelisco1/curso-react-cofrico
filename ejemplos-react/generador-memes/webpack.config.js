@@ -36,7 +36,11 @@ module.exports = {
     historyApiFallback: true
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: {
+      '@public': path.join(__dirname, 'public'),
+      '@components': path.join(__dirname, 'src', 'components')
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({

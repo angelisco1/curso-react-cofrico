@@ -5,6 +5,7 @@ import DotLoader from 'react-spinners/DotLoader'
 import MemeService from '../services/meme.service'
 import useMemeApi from '../hooks/useMemeApi'
 import '../styles/ListadoMemes.css'
+import { Heading } from '@chakra-ui/react'
 
 const listaMemes = [
   {
@@ -32,8 +33,8 @@ const ListadoMemes = () => {
 
   useEffect(() => {
     const getMemes = async () => {
-      const memes = await MemeService.findAll()
-      // const memes = await getAllMemes()
+      // const memes = await MemeService.findAll()
+      const memes = await getAllMemes()
       console.log({memes})
       setMemes(memes)
     }
@@ -50,7 +51,8 @@ const ListadoMemes = () => {
 
   return (
     <div>
-      <h1>Listado Memes</h1>
+      {/* <h1>Listado Memes</h1> */}
+      <Heading as="h1" size="2xl">Listado Memes</Heading>
 
       {loading ? (
           <DotLoader />

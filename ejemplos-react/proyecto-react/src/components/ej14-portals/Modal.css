@@ -1,0 +1,28 @@
+.backdrop {
+  background-color: rgba(122, 122, 122);
+  opacity: 0.6;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modal {
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 600px;
+  height: 400px;
+  background-color: white;
+  opacity: 1;
+  margin: 100px auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+}
