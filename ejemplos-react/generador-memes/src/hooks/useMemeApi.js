@@ -20,11 +20,24 @@ const useMemeApi = () => {
 
   }
 
+  const postMeme = async (meme) => {
+    setLoading(true)
+
+    try {
+      await MemeService.create(meme)
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
 
   return {
     loading,
     error,
     getAllMemes,
+    postMeme,
   }
 }
 

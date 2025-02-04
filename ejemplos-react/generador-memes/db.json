@@ -7,6 +7,22 @@
       "urlImagen": "https://i.pinimg.com/236x/64/6d/8b/646d8bf5a4b2dc031d9e7d04124aafdd.jpg",
       "colorLetra": "#000000",
       "likes": 2
+    },
+    {
+      "id": "d67a",
+      "textoSuperior": "Prueba 1",
+      "textoInferior": "Prueba 2",
+      "colorLetra": "rgba(240, 237, 237, 1)",
+      "urlImagen": "https://i.pinimg.com/236x/64/6d/8b/646d8bf5a4b2dc031d9e7d04124aafdd.jpg",
+      "likes": 0
+    },
+    {
+      "id": "af39",
+      "textoSuperior": "AAAA",
+      "textoInferior": "BBBB",
+      "colorLetra": "rgba(224, 209, 237, 1)",
+      "urlImagen": "https://i.pinimg.com/236x/64/6d/8b/646d8bf5a4b2dc031d9e7d04124aafdd.jpg",
+      "likes": 0
     }
   ],
   "users": [

@@ -14,6 +14,7 @@ import Ej11Formularios from './ej11-formularios/Ej11Formularios'
 import Ej12Suspense from './ej12-suspense/Ej12Suspense'
 import Ej13Routing from './ej13-routing/Ej13Routing'
 import Ej14Portals from './ej14-portals/Ej14Portals'
+import Ej15Redux from './ej15-redux/Ej15Redux'
 
 const App = () => {
   const nombre = 'Charly'
@@ -36,7 +37,8 @@ const App = () => {
       {/* <Ej11Formularios /> */}
       {/* <Ej12Suspense /> */}
       {/* <Ej13Routing /> */}
-      <Ej14Portals />
+      {/* <Ej14Portals /> */}
+      <Ej15Redux />
 
     </div>
   )
