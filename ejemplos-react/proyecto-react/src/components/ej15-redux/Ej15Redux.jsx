@@ -2,6 +2,7 @@ import React from 'react'
 import Contador from './Contador'
 import { Provider } from 'react-redux'
 import { store } from './store/configStore'
+import MaquinaExpendedora from './MaquinaExpendedora'
 
 const Ej15Redux = () => {
   return (
@@ -9,6 +10,8 @@ const Ej15Redux = () => {
       <div>
         <h2>Tema 15 - Redux</h2>
         <Contador />
+
+        <MaquinaExpendedora />
       </div>
     </Provider>
   )

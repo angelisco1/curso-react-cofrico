@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Meme from './Meme'
-import BotonMeGusta from './BotonMeGusta'
+import Meme from '../components/Meme'
+import BotonMeGusta from '../components/BotonMeGusta'
 import DotLoader from 'react-spinners/DotLoader'
 import MemeService from '../services/meme.service'
 import useMemeApi from '../hooks/useMemeApi'

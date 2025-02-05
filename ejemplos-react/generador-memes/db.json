@@ -32,5 +32,32 @@
       "email": "angel@gmail.com",
       "password": "1234abcd._;"
     }
-  ]
+  ],
+  "productos": [
+    {
+      "id": "abc",
+      "titulo": "Perrito piloto",
+      "stock": 9,
+      "precio": 9,
+      "codigo": 38
+    },
+    {
+      "id": "def",
+      "titulo": "Lampara de lava",
+      "stock": 4,
+      "precio": 10,
+      "codigo": 27
+    },
+    {
+      "id": "xyz",
+      "titulo": "Pistola de bolas",
+      "stock": 9,
+      "precio": 6,
+      "codigo": 29
+    }
+  ],
+  "estado": {
+    "gananciasTotales": 47,
+    "productosVendidos": 9
+  }
 }
