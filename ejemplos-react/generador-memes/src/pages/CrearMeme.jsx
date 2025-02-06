@@ -3,9 +3,11 @@ import FormularioMeme from '../components/FormularioMeme'
 import Meme from '../components/Meme'
 import { Box, Center, Flex, Heading } from '@chakra-ui/react'
 import useMemeApi from '../hooks/useMemeApi'
+import { useNavigate } from 'react-router'
 
 const CrearMeme = () => {
   const { postMeme } = useMemeApi()
+  const navigate = useNavigate()
 
   const [formMeme, setFormMeme] = useState({
     textoSuperior: 'Texto 1',
@@ -15,18 +17,27 @@ const CrearMeme = () => {
     likes: 0,
   })
 
-  const handleChangeForm = (event) => {
-    const datosActualizados = {
-      ...formMeme,
-      [event.key]: event.value
-    }
-    setFormMeme(datosActualizados)
+  // const handleChangeForm = (event) => {
+  //   const datosActualizados = {
+  //     ...formMeme,
+  //     [event.key]: event.value
+  //   }
+  //   setFormMeme(datosActualizados)
+  // }
+
+  const handleChangeForm = (datosActualizados) => {
+    setFormMeme({...formMeme, ...datosActualizados})
   }
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    // TODO: cuando añadamos el routing hay que redirigir al usuario al inicio/listado
-    postMeme(formMeme)
+  const handleSubmit = async () => {
+    // event.preventDefault()
+
+    const resp = await postMeme(formMeme)
+    if (!resp) {
+      alert('ERROR')
+    } else {
+      navigate('/')
+    }
   }
 
   return (

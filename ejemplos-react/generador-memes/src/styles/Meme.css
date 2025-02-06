@@ -23,6 +23,7 @@
 
 .meme > img {
   display: inline-block;
+  height: 100%;
 }
 
 /* p {

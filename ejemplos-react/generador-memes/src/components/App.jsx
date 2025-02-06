@@ -4,6 +4,8 @@ import ListadoMemes from '../pages/ListadoMemes'
 import CrearMeme from '../pages/CrearMeme'
 import { BrowserRouter, Routes, Route } from 'react-router'
 import Menu from './Menu'
+import { Box } from '@chakra-ui/react'
+import Login from '../pages/Login'
 
 
 const App = () => {
@@ -13,11 +15,15 @@ const App = () => {
       <Provider>
         <Menu />
 
-        <Routes>
-          <Route path="/" element={<ListadoMemes />} />
-          <Route path="/crear-meme" element={<CrearMeme />} />
-        </Routes>
+        <Box my={5}>
 
+          <Routes>
+            <Route path="/" element={<ListadoMemes />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/crear-meme" element={<CrearMeme />} />
+          </Routes>
+
+        </Box>
       </Provider>
     </BrowserRouter>
   )

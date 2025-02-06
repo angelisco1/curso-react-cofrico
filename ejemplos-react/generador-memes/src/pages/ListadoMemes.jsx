@@ -5,7 +5,7 @@ import DotLoader from 'react-spinners/DotLoader'
 import MemeService from '../services/meme.service'
 import useMemeApi from '../hooks/useMemeApi'
 import '../styles/ListadoMemes.css'
-import { Heading } from '@chakra-ui/react'
+import { Center, Heading } from '@chakra-ui/react'
 
 const listaMemes = [
   {
@@ -29,30 +29,47 @@ const listaMemes = [
 const ListadoMemes = () => {
   // const [memes, setMemes] = useState(listaMemes)
   const [memes, setMemes] = useState([])
-  const { loading, error, getAllMemes } = useMemeApi()
+  const { loading, error, getAllMemes, patchMeme } = useMemeApi()
 
   useEffect(() => {
     const getMemes = async () => {
       // const memes = await MemeService.findAll()
       const memes = await getAllMemes()
-      console.log({memes})
-      setMemes(memes)
+      if (error) {
+        alert('ERROR')
+      } else {
+        console.log({memes})
+        setMemes(memes)
+      }
     }
 
     getMemes()
   }, [])
 
+  const handleLike = async (memeId, likes) => {
+    const memeActualizado = await patchMeme(memeId, likes)
+    const listaMemesActualizada = memes.map(meme => {
+      if (meme.id === memeId) {
+        return memeActualizado
+      }
+      return meme
+    })
+    setMemes(listaMemesActualizada)
+  }
+
   const listaMemes = memes.map(meme => (
     <div key={meme.id} className="lista-memes">
       <Meme meme={meme} />
-      <BotonMeGusta likes={meme.likes} />
+      <BotonMeGusta likes={meme.likes} memeId={meme.id} onHandleClick={handleLike} />
     </div>
   ))
 
   return (
     <div>
       {/* <h1>Listado Memes</h1> */}
-      <Heading as="h1" size="2xl">Listado Memes</Heading>
+      <Center>
+        <Heading as="h1" size="2xl">Listado Memes</Heading>
+      </Center>
 
       {loading ? (
           <DotLoader />

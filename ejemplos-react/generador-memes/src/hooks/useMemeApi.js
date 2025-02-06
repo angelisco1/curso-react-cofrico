@@ -23,13 +23,34 @@ const useMemeApi = () => {
   const postMeme = async (meme) => {
     setLoading(true)
 
+    let memeCreado = null
+
     try {
-      await MemeService.create(meme)
+      memeCreado = await MemeService.create(meme)
+    } catch (err) {
+      setError(err.message)
+
+    } finally {
+      setLoading(false)
+    }
+
+    return memeCreado
+  }
+
+  const patchMeme = async (memeId, likes) => {
+    setLoading(true)
+
+    let memeActualizado = null
+
+    try {
+      memeActualizado = await MemeService.updateLikes(memeId, likes)
     } catch (err) {
       setError(err.message)
     } finally {
       setLoading(false)
     }
+
+    return memeActualizado
   }
 
 
@@ -38,6 +59,7 @@ const useMemeApi = () => {
     error,
     getAllMemes,
     postMeme,
+    patchMeme,
   }
 }
 
